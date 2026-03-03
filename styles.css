@@ -145,14 +145,14 @@ textarea:focus-visible {
 
 }
 
-.logo svg {
+.logo img {
   height: 34px;
   width: auto;
   display: block;
 }
 
 @media (max-width: 768px) {
-  .logo svg {
+  .logo img {
     height: 28px;
     margin-left: 20px;
   }
@@ -172,6 +172,12 @@ nav a:hover {
   color: rgba(255, 255, 255, 0.7);
 }
 
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: var(--space-xl);
+}
+
 .nav-links {
   display: flex;
   gap: var(--space-lg);
@@ -189,9 +195,8 @@ nav a:hover {
 
 /* Mobile styles */
 @media (max-width: 768px) {
-  .hero {
-    background-position: center top;
-    min-height: 70vh;
+  .nav-right {
+    gap: 0;
   }
 
   .nav-links {
@@ -255,15 +260,52 @@ li {
 
 
 /* =========================
+   Language switcher
+========================= */
+.lang-switch {
+  display: flex;
+  align-items: center;
+  gap: 0.15rem;
+}
+
+.lang-btn {
+  background: none;
+  border: none;
+  color: rgba(255, 255, 255, 0.5);
+  font-family: var(--font-base);
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  cursor: pointer;
+  padding: 0.2rem 0.2rem;
+  transition: color 150ms ease-out;
+}
+
+.lang-btn.active {
+  color: var(--white);
+}
+
+.lang-btn:hover {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.lang-sep {
+  color: rgba(255, 255, 255, 0.25);
+  font-size: 0.75rem;
+  user-select: none;
+}
+
+
+/* =========================
    Hero
 ========================= */
 .hero {
   background-color: var(--accent);
-  background-image: url("/images/vp_hero.png");
+  background-image: url("/images/vp_hero1.jpg");
   background-size: cover;
-  background-position: center top;
+  background-position: center;
   background-repeat: no-repeat;
-  min-height: 100vh;
+  min-height: 60vh;
   color: white;
   text-align: center;
 }
@@ -274,13 +316,24 @@ li {
   padding-bottom: calc(var(--space-xl) * 2);
 }
 
+@media (max-width: 768px) {
+  .hero {
+    min-height: 25vh;
+  }
+
+  .hero .container {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+}
+
 .hero-logo {
-  width: 140px;
+  width: 10px;
   margin-bottom: var(--space-xs);
 }
 
 .hero h1 {
-  font-family: "Gilroy", system-ui, -apple-system, BlinkMacSystemFont,
+  font-family: "Baskerville", "Gilroy", system-ui, -apple-system, BlinkMacSystemFont,
     "Segoe UI", sans-serif;
   font-size: clamp(2.8rem, 5vw, 4.6rem);
   font-weight: 400;
@@ -304,7 +357,7 @@ li {
 }
 
 .accent {
-  color: var(--accent-soft);
+  color: var(--accent);
 }
 
 /* =========================
@@ -450,7 +503,7 @@ li {
 
 .contact-linkedin a:hover ,
 .contact-email a:hover{
-  color: var(--accent-soft);
+  color: var(--accent);
   text-decoration: underline;
 }
 
@@ -538,7 +591,7 @@ li {
 }
 
 .privacy a {
-  color: var(--accent-soft);
+  color: var(--accent);
   text-decoration: underline;
 }
 

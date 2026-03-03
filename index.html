@@ -5,13 +5,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <!-- SEO -->
-  <title>Victoire Partners | Executive Search & Leadership Advisory</title>
+  <title>Victoire Partners | Management Search</title>
   <meta name="description" content="Victoire Partners accompagne dirigeants, conseils d’administration et investisseurs en Executive Search et leadership advisory, en France et à l’international." />
   <link rel="canonical" href="https://www.VictoirePartners.com/" />
+  <link rel="alternate" hreflang="x-default" href="https://www.VictoirePartners.com/" />
+  <link rel="icon" href="/images/vp_logo.svg" type="image/svg+xml" />
 
   <!-- Social sharing (optional but recommended) -->
   <meta property="og:title" content="Victoire Partners | Executive Search & Leadership Advisory" />
-  <meta property="og:description" content="Cabinet d’Executive Search et de conseil en leadership basé à Marseille, actif en France et à l’international." />
+  <meta property="og:description" content="Cabinet de Management Search et de conseil en leadership basé à Marseille, actif en France et à l’international." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://www.VictoirePartners.com/" />
 
@@ -25,11 +27,10 @@
      CONTENT Site (INLINE)
 ========================= -->
 <script>
-  const CONTENT = {
+  const CONTENT_FR = {
     contact_title: "Contactez-nous",
     contact_intro_1: "[Texte d’introduction à compléter.]",
     contact_location_md: "**Implantations :** [À compléter]",
-    contact_button: "Envoyer le message",
     linkedin_text: "Nous rejoindre sur LinkedIn",
 
     mavision_section_md: "## Notre Vision\n\n[Texte de présentation à compléter. Décrivez ici votre vision, vos valeurs et ce qui vous différencie.]",
@@ -44,6 +45,48 @@
     card_ma_methode_md: "### Notre méthode\n\n[À compléter.]",
     card_mes_principes_md: "### Nos principes\n\n[À compléter.]",
   };
+
+  const CONTENT_EN = {
+    contact_title: "Contact Us",
+    contact_intro_1: "[Introduction text to be completed.]",
+    contact_location_md: "**Locations:** [To be completed]",
+    linkedin_text: "Join us on LinkedIn",
+
+    mavision_section_md: "## Our Vision\n\n[Presentation text to be completed. Describe your vision, values, and what sets you apart.]",
+    ma_vision_pullquote_md: "**[Key quote to be completed.]**",
+
+    card_executive_search_md: "### Management Search\n\n[Executive Search offer description to be completed.]",
+    card_leadership_advisory_md: "### Leadership Advisory\n\n[Leadership Advisory offer description to be completed.]",
+
+    expertise_section_md: "## Our Expertise\n\n[Expertise presentation text to be completed.]",
+
+    card_valeur_model_md: "### Our value model\n\n[To be completed.]",
+    card_ma_methode_md: "### Our methodology\n\n[To be completed.]",
+    card_mes_principes_md: "### Our principles\n\n[To be completed.]",
+  };
+
+  const I18N = {
+    fr: {
+      nav_vision:     "Ma Vision",
+      nav_expertise:  "Mon Expertise",
+      nav_contact:    "Contactez-moi",
+      hamburger_menu: "Ouvrir le menu",
+      label_name:     "Votre nom",
+      label_email:    "Votre email",
+      label_message:  "Votre message",
+      contact_button: "Envoyer le message",
+    },
+    en: {
+      nav_vision:     "Our Vision",
+      nav_expertise:  "Our Expertise",
+      nav_contact:    "Contact Us",
+      hamburger_menu: "Open menu",
+      label_name:     "Your name",
+      label_email:    "Your email",
+      label_message:  "Your message",
+      contact_button: "Send message",
+    },
+  };
 </script>
   
 
@@ -53,32 +96,24 @@
 <header class="header">
   <div class="nav">
     <a href="/" class="logo" aria-label="Victoire Partners – Management Search">
-      <svg viewBox="0 0 280 54" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" color="white">
-        <!-- Mountain silhouette (Sainte-Victoire) -->
-        <path d="M 8,28 C 35,26 52,19 66,13 L 78,6 L 80,3 L 82,6 L 96,13 C 114,18 130,11 148,14 C 165,17 188,22 215,25 L 272,28"
-              fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
-        <!-- Chapel/cross marker at summit -->
-        <line x1="76" y1="5" x2="84" y2="5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/>
-        <!-- VICTOIRE PARTNERS -->
-        <text x="140" y="44" text-anchor="middle"
-              font-family="Georgia, 'Times New Roman', serif"
-              font-size="20" letter-spacing="5" fill="currentColor" font-weight="400">VICTOIRE PARTNERS</text>
-        <!-- MANAGEMENT SEARCH -->
-        <text x="140" y="54" text-anchor="middle"
-              font-family="Georgia, 'Times New Roman', serif"
-              font-size="8" letter-spacing="4.5" fill="currentColor" font-weight="300">MANAGEMENT SEARCH</text>
-      </svg>
+      <img src="/images/vp_logo.svg" alt="Victoire Partners" />
     </a>
 
-    <button class="hamburger" aria-label="Ouvrir le menu" aria-expanded="false">
-      &#9776;
-    </button>
-
-    <nav class="nav-links" aria-label="Navigation principale">
-      <a href="/#vision" >Ma Vision</a>
-      <a href="/#expertise" >Mon Expertise</a>
-      <a href="/#contact" >Contactez-moi</a>
-    </nav>
+    <div class="nav-right">
+      <button class="hamburger" data-i18n-aria="hamburger_menu" aria-label="Ouvrir le menu" aria-expanded="false">
+        &#9776;
+      </button>
+      <nav class="nav-links" aria-label="Navigation principale">
+        <a href="/#vision"    data-i18n="nav_vision">Ma Vision</a>
+        <a href="/#expertise" data-i18n="nav_expertise">Mon Expertise</a>
+        <a href="/#contact"   data-i18n="nav_contact">Contactez-moi</a>
+      </nav>
+      <div class="lang-switch" role="group" aria-label="Language">
+        <button class="lang-btn" data-lang="fr">FR</button>
+        <span class="lang-sep" aria-hidden="true">|</span>
+        <button class="lang-btn" data-lang="en">EN</button>
+      </div>
+    </div>
   </div>
 </header>
 
@@ -115,7 +150,7 @@
 <!-- =========================
      EXPERTISE
 ========================= -->
-<section id="expertise" class="section" aria-labelledby="expertise-title">
+<section id="expertise" class="section">
   <div class="container">
     <section data-content="expertise_section_md"></section>
 
@@ -141,16 +176,16 @@
     <form name="contact" netlify method="POST" data-netlify="true" class="contact-form">
       <input type="hidden" name="form-name" value="contact" />
     
-      <label for="name" class="sr-only">Votre nom</label>
-      <input id="name" type="text" name="name" placeholder="Votre nom" required />
-    
-      <label for="email" class="sr-only">Votre email</label>
-      <input id="email" type="email" name="email" placeholder="Votre email" required />
-    
-      <label for="message" class="sr-only">Votre message</label>
-      <textarea id="message" name="message" placeholder="Votre message" required></textarea>
-    
-      <button type="submit">Envoyer le message</button>
+      <label for="name" class="sr-only" data-i18n="label_name">Votre nom</label>
+      <input id="name" type="text" name="name" placeholder="Votre nom" data-i18n-placeholder="label_name" required />
+
+      <label for="email" class="sr-only" data-i18n="label_email">Votre email</label>
+      <input id="email" type="email" name="email" placeholder="Votre email" data-i18n-placeholder="label_email" required />
+
+      <label for="message" class="sr-only" data-i18n="label_message">Votre message</label>
+      <textarea id="message" name="message" placeholder="Votre message" data-i18n-placeholder="label_message" required></textarea>
+
+      <button type="submit" data-i18n="contact_button">Envoyer le message</button>
     </form>
     
     <div class="contact-box">
@@ -191,23 +226,48 @@
 <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 
 <script>
-  document.querySelectorAll("[data-content]").forEach(el => {
-    const key = el.dataset.content;
-    if (CONTENT[key]) {
-      const isMarkdown = key.endsWith("_md");
-      if (!isMarkdown) {
-        // Plain text only
-        el.innerHTML = CONTENT[key];
-        return;
+  function renderContent(lang) {
+    const content = lang === 'en' ? CONTENT_EN : CONTENT_FR;
+    const t = I18N[lang];
+
+    document.querySelectorAll("[data-content]").forEach(el => {
+      const key = el.dataset.content;
+      if (content[key]) {
+        el.innerHTML = key.endsWith("_md") ? marked.parse(content[key]) : content[key];
       }
-//      el.textContent = CONTENT[key];
-      el.innerHTML = marked.parse(CONTENT[key]);
-    }
+    });
+
+    document.querySelectorAll("[data-i18n]").forEach(el => {
+      const key = el.dataset.i18n;
+      if (t[key]) el.textContent = t[key];
+    });
+
+    document.querySelectorAll("[data-i18n-placeholder]").forEach(el => {
+      const key = el.dataset.i18nPlaceholder;
+      if (t[key]) el.placeholder = t[key];
+    });
+
+    document.querySelectorAll("[data-i18n-aria]").forEach(el => {
+      const key = el.dataset.i18nAria;
+      if (t[key]) el.setAttribute('aria-label', t[key]);
+    });
+
+    document.documentElement.lang = lang;
+    document.querySelectorAll('.lang-btn').forEach(btn => {
+      btn.classList.toggle('active', btn.dataset.lang === lang);
+    });
+  }
+
+  const savedLang = localStorage.getItem('vp-lang') || 'fr';
+  renderContent(savedLang);
+
+  document.querySelectorAll('.lang-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const lang = btn.dataset.lang;
+      localStorage.setItem('vp-lang', lang);
+      renderContent(lang);
+    });
   });
-
-
-
-
 </script>
 
 <script src="/nav.js" defer></script>
