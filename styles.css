@@ -364,7 +364,7 @@ li {
     grid-template-columns: 1fr;
   }
   .intro-founder {
-    order: -1;
+    order: 1;
   }
 }
 
