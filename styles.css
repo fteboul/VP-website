@@ -558,6 +558,13 @@ li {
 #missions .card-h li:nth-child(3)::before { content: "🤝"; }
 #missions .card-h li:nth-child(4)::before { content: "📊"; }
 
+.title-short { display: none; }
+
+@media (max-width: 768px) {
+  .title-full { display: none; }
+  .title-short { display: inline; }
+}
+
 
 /* =========================
    Contact
