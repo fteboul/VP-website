@@ -151,7 +151,7 @@ textarea:focus-visible {
 
 @media (max-width: 768px) {
   .logo {
-    padding: 6px 8px;
+    padding: 2px 8px 10px;
   }
   .logo img {
     height: calc(var(--header-height) - 12px);
@@ -554,6 +554,10 @@ li {
   align-items: baseline;
   gap: 0.6em;
   padding: 0.25em 0;
+}
+
+.card-h .li-content {
+  flex: 1;
 }
 
 .card-h li::before {
