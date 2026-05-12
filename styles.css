@@ -69,22 +69,6 @@ body {
   background: var(--bg);
 }
 
-.mobile-break {
-  display: none;
-}
-/* Hide "and" on mobile only */
-@media (max-width: 768px) {
-  .hide-mobile {
-    display: none;
-  }
-}
-
-@media (max-width: 768px) {
-  .mobile-break {
-    display: block;
-  }
-}
-
 /* Focus styles for accessibility */
 a:focus-visible,
 button:focus-visible,
@@ -300,24 +284,6 @@ li {
 
 
 /* =========================
-   Hero
-========================= */
-.hero {
-  background-color: var(--accent);
-  background-image: url("/images/vp_hero.svg");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  min-height: 40vh;
-}
-
-@media (max-width: 768px) {
-  .hero {
-    min-height: 22vh;
-  }
-}
-
-/* =========================
    Intro (tagline below hero)
 ========================= */
 .intro {
@@ -356,8 +322,8 @@ li {
   margin-top: var(--space-lg);
   padding-left: var(--space-lg);
   border-left: 3px solid var(--accent);
-  font-family: inherit;
-  font-size: 1.35rem;
+  font-family: 'Georgia', serif;
+  font-size: var(--text-body);
   line-height: 1.6;
   color: var(--text);
 }
@@ -379,8 +345,8 @@ li {
 
 .intro-tagline {
   font-family: 'Georgia', serif;
-  font-size: clamp(1.4rem, 2.5vw, 2.0rem);
-  font-weight: 500;
+  font-size: clamp(1.8rem, 2.5vw, 2.6rem);
+  font-weight: 450;
   color: var(--text);
   margin: 0 auto var(--space-md) auto; /* auto left/right centers the block */
   max-width: 700px;                    /* ← adjust this to control line width */
@@ -389,8 +355,8 @@ li {
 }
 
 .intro-subtitle {
-  font-size: clamp(0.9rem, 1.4vw, 1.05rem);
-  font-weight: 300;
+  font-size: var(--text-body);
+  font-weight: 400;
   color: var(--muted);
   max-width: 620px;
   margin: 0;
@@ -409,24 +375,6 @@ li {
 
 
 
-.hero p {
-  font-size: clamp(1.2rem, 2.5vw, 2.2rem);
-}
-
-.accent {
-  color: var(--accent);
-}
-
-/* =========================
-   Services
-========================= */
-.services {
-  display: grid;
-  /* grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); */
-  gap: var(--space-lg);
-  margin-top: var(--space-md);
-}
-
 .temoignage-label {
   margin: var(--space-xl) 0 0 0;
   font-size: 0.75rem;
@@ -440,7 +388,7 @@ li {
   margin: var(--space-xl) 0;
   padding-left: var(--space-lg);
   border-left: 3px solid var(--accent);
-  font-family: inherit;
+  font-family: 'Georgia', serif;
   font-size: var(--text-body);
   line-height: 1.6;
   color: var(--text);
@@ -489,7 +437,7 @@ li {
 .step-body h3 {
   margin: 0 0 var(--space-sm) 0;
   font-size: 1.05rem;
-  font-weight: 700;
+  font-weight: 500;
   color: var(--text);
 }
 
@@ -509,15 +457,6 @@ li {
   }
 }
 
-/* =========================
-   Expertise
-========================= */
-.expertise {
-  display: grid;
-  gap: var(--space-lg);
-  margin-top: var(--space-md);
-}
-
 .card-h {
   background: var(--card);
   padding: var(--space-md) var(--space-xl);
@@ -528,17 +467,23 @@ li {
 
 .card-h h3 {
   margin-top: 0;
+  font-size: 1.05rem;
+  font-weight: 500;
 }
 .card-h p {
   margin: 0.3em 0;
+  font-size: var(--text-body);
 }
 
 .card-h p:first-of-type {
   margin-top: 0;
+  font-size: var(--text-body);
+  font-weight: 300;
 }
 
 .card-h p:last-of-type {
   margin-bottom: 0;
+  font-size: var(--text-body);
 }
 
 .card-h > *:last-child { margin-bottom: 0; }
@@ -583,13 +528,6 @@ li {
 /* =========================
    Contact
 ========================= */
-.contact {
-  gap: var(--space-lg);
-  min-height: 40vh;
-}
-
-
-
 .contact-form {
   max-width: 500px;
   margin-top: var(--space-xl);
