@@ -210,7 +210,7 @@ nav a:hover {
    Typography
 ========================= */
 .section h2 {
-  font-family: 'Georgia', serif;
+  font-family: var(--font-base);
   font-size: clamp(1.8rem, 2.5vw, 2.6rem);
   font-weight: 450;
   margin: 0 0 var(--space-lg) 0;
