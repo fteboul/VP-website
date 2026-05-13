@@ -147,7 +147,7 @@ nav a {
   margin-left: var(--space-lg);
   text-decoration: none;
   color: var(--white);
-  font-weight: 500;
+  font-weight: 400;
   font-size: clamp(0.9rem, 1.2vw, 1.05rem);
   padding: var(--space-sm) 0;
   transition: color 150ms ease-out;
@@ -165,6 +165,7 @@ nav a:hover {
 
 .nav-links {
   display: flex;
+  align-items: center;
   gap: var(--space-lg);
 }
 
@@ -211,7 +212,9 @@ nav a:hover {
 ========================= */
 .section h2 {
   font-family: var(--font-base);
-  font-size: clamp(1.8rem, 2.5vw, 2.6rem);
+/*  font-size: clamp(1.35rem, 1.875vw, 1.95rem);
+*/
+  font-size: clamp(1.35rem, 1.875vw, 1.95rem);
   font-weight: 450;
   margin: 0 0 var(--space-lg) 0;
 }
@@ -468,7 +471,7 @@ li {
 .card-h h3 {
   margin-top: 0;
   font-size: 1.05rem;
-  font-weight: 500;
+  font-weight: 450;
 }
 .card-h p {
   margin: 0.3em 0;
